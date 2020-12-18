@@ -1,19 +1,27 @@
 # e4040-2020Fall-project
-Seed repo for projects for e4040-2020Fall-project
-  - distributed as Github Repo and shared via Github Classroom
-  - contains only README.md file
-  - Students must have at least one main Jupyter Notebook, and a number of python files in a number of directories and subdirectories such as utils or similar, as demonstrated in the assignments
-  - The organization of the directories has to be meaningful
+Repository for CRKY Team Project (CJR2198)
 
-# Detailed instructions how to submit this assignment/homework/project:
-1. The assignment will be distributed as a github classroom assignment - as a special repository accessed through a link
-2. A students copy of the assignment gets created automatically with a special name - students have to rename the repo per instructions below
-3. The solution(s) to the assignment have to be submitted inside that repository as a set of "solved" Jupyter Notebooks, and several modified python files which reside in directories/subdirectories
-4. Three files/screenshots need to be uploaded into the directory "figures" which prove that the assignment has been done in the cloud
+The paper this project is based on is "Unsupervised Representation Learning With Deep Convolutional Generative Adversarial Networks" by Alec Radford, Luke Metz & Soumith Chintala (https://arxiv.org/abs/1511.06434)
 
-## (Re)naming of a project repository shared by multiple students (TODO students)
-INSTRUCTIONS for naming the students' solution repository for assignments with more students, such as the final project. Students need to use a 4-letter groupID): 
-* Template: e4040-2020Fall-Project-GroupID-UNI1-UNI2-UNI3. -> Example: e4040-2020Fall-Project-MEME-zz9999-aa9999-aa0000.
+The notebooks in the base contain experiments referenced in the project report (though not exhaustive).
+
+# Generation / Paper Reproduction Notebooks
+ImageNet-1K CIFAR-10 Classification - I train a DCGAN on the ImageNet-1K dataset then use the descriminator as a feature extractor on CIFAR-10 and classify the images with an L2-SVM
+Generate ImageNet Images - Demonstrate ImageNet1k image generation with a trained DCGAN
+Generate Face Images - Demonstration of facial image generation and vector arithmetic with trained DCGAN
+
+# Training and Generation Notebooks
+CelebA 128x128 - Scaling DCGAN architectures to higher resolutions
+CelebA 64x64 - Sample of runs at 64x64 resolution with varying architectures
+CelebA 32x32 - Sample of runs at 32x32 resolution with varying architectures
+
+# MNIST DCGANs as Labeled Image Generators
+MNIST Experiment - DCGANs are trained using a subset of training data, generators are used to generate training data and an EfficientNetB0 is trained using the generated data. Full dataset with augmentation used as benchmark.
+
+
+
+The source files for the DCGAN model and model functions can be found within the SourceFiles/ModelSourceFiles subdirectory. Utility functions used for graphs can be found within the SourceFiles/Utilites subdirectory.
+
 
 # Organization of this directory
 To be populated by students, as shown in previous assignments
