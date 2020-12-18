@@ -6,13 +6,20 @@ The paper this project is based on is "Unsupervised Representation Learning With
 The notebooks in the base contain experiments referenced in the project report (though not exhaustive).
 
 # Generation / Paper Reproduction Notebooks
-ImageNet-1K CIFAR-10 Classification - I train a DCGAN on the ImageNet-1K dataset then use the descriminator as a feature extractor on CIFAR-10 and classify the images with an L2-SVM
-Generate ImageNet Images - Demonstrate ImageNet1k image generation with a trained DCGAN
+
+ImageNet-1K CIFAR-10 Classification - I train a DCGAN on the ImageNet-1K dataset then use the descriminator as a feature extractor on CIFAR-10 and classify the images with an L2-
+SVM
+
+Generate ImageNet Images - Demonstration of ImageNet1k image generation with a trained DCGAN
+
 Generate Face Images - Demonstration of facial image generation and vector arithmetic with trained DCGAN
 
 # Training and Generation Notebooks
+
 CelebA 128x128 - Scaling DCGAN architectures to higher resolutions
+
 CelebA 64x64 - Sample of runs at 64x64 resolution with varying architectures
+
 CelebA 32x32 - Sample of runs at 32x32 resolution with varying architectures
 
 # MNIST DCGANs as Labeled Image Generators
