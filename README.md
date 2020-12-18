@@ -22,6 +22,8 @@ CelebA 64x64 - Sample of runs at 64x64 resolution with varying architectures
 
 CelebA 32x32 - Sample of runs at 32x32 resolution with varying architectures
 
+LSUN 64x64 - Sample of runs at 64x64 resolution with varying architectures
+
 # MNIST DCGANs as Labeled Image Generators
 MNIST Experiment - DCGANs are trained using a subset of training data, generators are used to generate training data and an EfficientNetB0 is trained using the generated data. Full dataset with augmentation used as benchmark.
 
