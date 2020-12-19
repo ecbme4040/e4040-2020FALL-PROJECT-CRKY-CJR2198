@@ -143,7 +143,7 @@ def create_discriminator_dict(disc_dict, input_dim):
      x = layers.Dropout(dropout)(x)
 
     if noise == True: # To apply noise
-        x = layers.GaussianNoise(0.02)
+        x = layers.GaussianNoise(0.02)(x)
 
     x = layers.Dense(1)(x) #Output logit, not applying activation
     model = tf.keras.Model(x_in, x)
