@@ -81,9 +81,10 @@ class DCGAN (tf.keras.Model):
             plt.imshow((images[i, :, :, :] * 127.5 + 127.5).astype(np.uint8)) ## cast to normal (0,255) by multipying by 127.5 and adding 127.5 because generator output is same range as tanh
             plt.axis('off') ## remove the axis from the image
         fig.tight_layout() ##Tight layout for a nicer image
-        plt.show()## show in the notebook
-        plt.savefig(self.example_path + str('epoch_{:04d}.png'.format(epoch))) ## save it to the examples folder in model subfolder
+        plt.savefig(self.example_path + str('epoch_{:04d}.png'.format(epoch)))  ## save it to the examples folder in model subfolder
 
+        plt.show()## show in the notebook
+        
     def save_model_weights(self, epoch):
         ## Saves model weights every epoch
         ## Dedicated folder for generator weights and discriminator weights
@@ -249,11 +250,13 @@ class DCGAN (tf.keras.Model):
             return FeatureExtractor # Return the feature extractor
         return None
 
-
+#Custom callback, save models, show the current progress image and reset the metrics for next epoch
 class SaveModelAndCreateImages (tf.keras.callbacks.Callback):
-    def on_epoch_end(self, epoch, logs=None):
-        self.model.save_model_weights(epoch)
-        self.model.gen_and_show_img(epoch)
+    def on_epoch_end(self, epoch, logs=None): ##called at the end of the epoch
+        self.model.save_model_weights(epoch) ##Save models (full model rather than weights)
+        self.model.gen_and_show_img(epoch) ##Generate and show images during training
+
+        ### reset all metrics ###
         self.model.Disc_gen_accuracy_metric.reset_states()
         self.model.Disc_real_accuracy_metric.reset_states()
         self.model.Disc_binary_cross.reset_states()
