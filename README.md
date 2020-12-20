@@ -46,3 +46,95 @@ Images generated using trained DCGANs can be found in the Generated Examples sub
 
 # Organization of this directory
 To be populated by students, as shown in previous assignments
+.
+├── CelebA 128x128.ipynb
+├── CelebA 32x32.ipynb
+├── CelebA 64x64.ipynb
+├── E4040.2020Fall.DCGAN.report.cjr2198.pdf
+├── Generated Examples
+│   ├── 32x32_40%Dropout_Epoch_60CelebA.png
+│   ├── 32x32 CelebA 40% Dropout.png
+│   ├── 32x32 CelebA No Dropout.png
+│   ├── 32x32ImageNetEpoch10.png
+│   ├── 32x32ImageNet Epoch255 Deep Generator.png
+│   ├── 32x32ImageNetEpoch40.png
+│   ├── 32x32ImageNetEpoch80.png
+│   ├── 32x32ImageNet.png
+│   ├── 32x32NoDropoutCeleb60Epoch.png
+│   ├── 64x64 CelebA Deep Discriminator Epoch 37.png
+│   ├── 64x64 CelebA Deep Discriminator Epoch 38.png
+│   ├── 64x64CelebA_Normal_Distribution.png
+│   ├── 64x64CelebA_Uniform_Distribution.png
+│   ├── 64x64CelebA_with_bias.png
+│   ├── 64x64 CelebA_without_bias.png
+│   ├── 64x64 Celeb Experiment.png
+│   ├── 64x64 Celeb High Quality.png
+│   ├── 64x64 Celeb Normal.png
+│   ├── 64x64 Celeb Uniform.png
+│   ├── 64x64LSUN_256_Latent.png
+│   ├── 64x64LSUN_normal_dist_256_latent.png
+│   └── CelebAFinal.png
+├── Generate Face Images.ipynb
+├── Generate ImageNet Images.ipynb
+├── .github
+│   └── .keep
+├── ImageNet-1K CIFAR-10 Classification.ipynb
+├── .ipynb_checkpoints
+├── LSUN 64x64.ipynb
+├── MNIST Experiment.ipynb
+├── README.md
+└── SourceFiles
+    ├── ModelSourceFiles
+    │   ├── DCGAN.py
+    │   ├── ModelFunctions.py
+    │   └── Utils.py
+    └── Utilities
+        └── Utils.py
+
+6 directories, 37 files
+.
+├── CelebA 128x128.ipynb
+├── CelebA 32x32.ipynb
+├── CelebA 64x64.ipynb
+├── E4040.2020Fall.DCGAN.report.cjr2198.pdf
+├── Generated Examples
+│   ├── 32x32_40%Dropout_Epoch_60CelebA.png
+│   ├── 32x32 CelebA 40% Dropout.png
+│   ├── 32x32 CelebA No Dropout.png
+│   ├── 32x32ImageNetEpoch10.png
+│   ├── 32x32ImageNet Epoch255 Deep Generator.png
+│   ├── 32x32ImageNetEpoch40.png
+│   ├── 32x32ImageNetEpoch80.png
+│   ├── 32x32ImageNet.png
+│   ├── 32x32NoDropoutCeleb60Epoch.png
+│   ├── 64x64 CelebA Deep Discriminator Epoch 37.png
+│   ├── 64x64 CelebA Deep Discriminator Epoch 38.png
+│   ├── 64x64CelebA_Normal_Distribution.png
+│   ├── 64x64CelebA_Uniform_Distribution.png
+│   ├── 64x64CelebA_with_bias.png
+│   ├── 64x64 CelebA_without_bias.png
+│   ├── 64x64 Celeb Experiment.png
+│   ├── 64x64 Celeb High Quality.png
+│   ├── 64x64 Celeb Normal.png
+│   ├── 64x64 Celeb Uniform.png
+│   ├── 64x64LSUN_256_Latent.png
+│   ├── 64x64LSUN_normal_dist_256_latent.png
+│   └── CelebAFinal.png
+├── Generate Face Images.ipynb
+├── Generate ImageNet Images.ipynb
+├── .github
+│   └── .keep
+├── ImageNet-1K CIFAR-10 Classification.ipynb
+├── .ipynb_checkpoints
+├── LSUN 64x64.ipynb
+├── MNIST Experiment.ipynb
+├── README.md
+└── SourceFiles
+    ├── ModelSourceFiles
+    │   ├── DCGAN.py
+    │   ├── ModelFunctions.py
+    │   └── Utils.py
+    └── Utilities
+        └── Utils.py
+
+6 directories, 37 files
