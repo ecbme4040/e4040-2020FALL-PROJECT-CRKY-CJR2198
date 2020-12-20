@@ -1,9 +1,11 @@
 # e4040-2020Fall-project
 Repository for CRKY Team Project (CJR2198)
 
+![alt text](https://github.com/ecbme4040/e4040-2020FALL-PROJECT-CRKY-CJR2198/blob/main/Generated%20Examples/CelebAFinal.png?raw=true)
+
 The paper this project is based on is "Unsupervised Representation Learning With Deep Convolutional Generative Adversarial Networks" by Alec Radford, Luke Metz & Soumith Chintala (https://arxiv.org/abs/1511.06434)
 
-The notebooks in the base contain experiments referenced in the project report (though not exhaustive).
+The notebooks listed below contain a sample of the experiments referenced in the project report.
 
 # Generation / Paper Reproduction Notebooks
 
