@@ -1,7 +1,7 @@
 # e4040-2020Fall-project
 Repository for CRKY Team Project (CJR2198)
 
-# Sample from CelebA DCGAN:
+# Generated Sample from CelebA DCGAN:
 
 ![alt text](https://github.com/ecbme4040/e4040-2020FALL-PROJECT-CRKY-CJR2198/blob/main/Generated%20Examples/CelebAFinal.png?raw=true)
 
