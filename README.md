@@ -32,13 +32,13 @@ LSUN 64x64 - Sample of runs at 64x64 resolution with varying architectures
 MNIST Experiment - DCGANs are trained using a subset of training data, generators are used to generate training data and an EfficientNetB0 is trained using the generated data. Full dataset with augmentation used as benchmark.
 
 # Requirements
- Tensorflow 2.2 for all notebooks except the MNIST notebook, which requires Tensorflow 2.3 (for dataset_from_directory)
+ * Tensorflow 2.2 for all notebooks except the MNIST notebook, which requires Tensorflow 2.3 (for dataset_from_directory)
  
- Seaborn (for plots)
+ * Seaborn (for plots)
  
- tensorflow_datasets (to download datasets)
+ * tensorflow_datasets (to download datasets)
  
- CIFAR-10 SVM Notebook - Requires scikit-learn for the L2-SVM
+ * CIFAR-10 SVM Notebook - Requires scikit-learn for the L2-SVM
  
 
 # Source Files 
