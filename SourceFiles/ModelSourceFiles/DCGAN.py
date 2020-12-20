@@ -1,7 +1,6 @@
 
 import tensorflow as tf
 from tensorflow.keras import layers, losses, optimizers
-import tqdm
 import matplotlib.pyplot as plt
 import numpy as np
 from IPython import display
