@@ -40,5 +40,9 @@ The source files for the DCGAN model and model functions can be found within the
 Utility functions used for graphs can be found within the SourceFiles/Utilites subdirectory.
 
 
+# Generated Example Images
+
+Images generated using trained DCGANs can be found in the Generated Examples subdirectory.
+
 # Organization of this directory
 To be populated by students, as shown in previous assignments
