@@ -150,20 +150,22 @@ def create_discriminator_dict(disc_dict, input_dim):
 
     return model
 
-##Custom linear layer
+## Custom linear layer tested for reprojection layer
+## Did not work better than fully connected dense
 class Linear(tf.keras.layers.Layer):
     def __init__(self, output_size=1024*4*4):
         super(Linear, self).__init__()
         self.out_size = output_size
 
     def build(self, input_shape):
+        #Initialize
         matrix_init = tf.random_normal_initializer(mean=0.0, stddev=0.02, seed=None)
         self.w = tf.Variable(initial_value=matrix_init(shape=(input_shape[-1], self.out_size), dtype='float32'), trainable=True) #No bias
 
-    def call(self, inputs):
+    def call(self, inputs): #simple matrix multiplication
         return tf.matmul(inputs, self.w)
 
-    def get_config(self):
+    def get_config(self): #Keras needs this to understand the trainable params and to save to h5
         config = super().get_config().copy()
         config.update({'out_size': self.out_size})
         return config
