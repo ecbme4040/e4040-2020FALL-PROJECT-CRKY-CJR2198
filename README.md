@@ -31,7 +31,11 @@ MNIST Experiment - DCGANs are trained using a subset of training data, generator
 
 
 
-The source files for the DCGAN model and model functions can be found within the SourceFiles/ModelSourceFiles subdirectory. Utility functions used for graphs can be found within the SourceFiles/Utilites subdirectory.
+# Source Files 
+
+The source files for the DCGAN model and model functions can be found within the SourceFiles/ModelSourceFiles subdirectory. 
+
+Utility functions used for graphs can be found within the SourceFiles/Utilites subdirectory.
 
 
 # Organization of this directory
