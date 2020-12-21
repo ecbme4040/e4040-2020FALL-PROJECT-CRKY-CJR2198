@@ -9,15 +9,6 @@ The paper this project is based on is "Unsupervised Representation Learning With
 
 The notebooks listed below contain a sample of the experiments referenced in the project report.
 
-# Generation / Paper Reproduction Notebooks
-
-* ImageNet-1K CIFAR-10 Classification - I train a DCGAN on the ImageNet-1K dataset then use the descriminator as a feature extractor on CIFAR-10 and classify the images with an L2-
-SVM
-
-* Generate ImageNet Images - Demonstration of ImageNet1k image generation with a trained DCGAN
-
-* Generate Face Images - Demonstration of facial image generation and vector arithmetic with trained DCGAN
-
 # Training and Generation Notebooks
 
 * CelebA 128x128 - Scaling DCGAN architectures to higher resolutions
@@ -27,6 +18,17 @@ SVM
 * CelebA 32x32 - Sample of runs at 32x32 resolution with varying architectures
 
 * LSUN 64x64 - Sample of runs at 64x64 resolution with varying architectures
+
+# Image Generation Notebooks
+
+* Generate ImageNet Images - Demonstration of ImageNet1k image generation with a trained DCGAN
+
+* Generate Face Images - Demonstration of facial image generation and vector arithmetic with trained DCGAN
+
+# L2-SVM Paper Reproduction Notebook
+
+* ImageNet-1K CIFAR-10 Classification - I train a DCGAN on the ImageNet-1K dataset then use the descriminator as a feature extractor on CIFAR-10 and classify the images with an L2-
+SVM
 
 # MNIST DCGANs as Labeled Image Generator Notebook
 * MNIST Experiment - DCGANs are trained using a subset of training data, generators are used to generate training data and an EfficientNetB0 is trained using the generated data. Full dataset with augmentation used as benchmark.
@@ -54,6 +56,13 @@ Images generated using trained DCGANs can be found in the Generated Examples sub
 
 # Instructions 
 
+To generate images using a DCGAN, load the generator from the file.
+
+For the Generator:
+
+Check the input shape to the model. This will be the number of latent variables. 
+
+Inputs will be either tf.random.normal([#images_to_generate, #latent_variables], stddev=0.2) or tf.random.uniform([#images_to_generate, #latent_variables], minval=-1., maxval=1.)
 
 
 # Trained Models
