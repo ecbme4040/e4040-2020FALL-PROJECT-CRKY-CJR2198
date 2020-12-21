@@ -56,13 +56,41 @@ Images generated using trained DCGANs can be found in the Generated Examples sub
 
 # Instructions 
 
-To generate images using a DCGAN, load the generator from the file.
+### To generate images:
 
-For the Generator:
+To generate images using a DCGAN, load the generator from the file.
 
 Check the input shape to the model. This will be the number of latent variables. 
 
 Inputs will be either tf.random.normal([#images_to_generate, #latent_variables], stddev=0.2) or tf.random.uniform([#images_to_generate, #latent_variables], minval=-1., maxval=1.)
+
+Refer to the notebooks "Generate Face Images.ipynb" and "Generate ImageNet Images.ipynb" for worked examples.
+
+### To train a DCGAN:
+
+To train a DCGAN, see notebooks for detailed examples and documentation refer to the notebook "CelebA 64x64.ipynb' (all notebooks have clear instructions and examples).
+
+Train input images are image vectors normalized to (-1,1), model is fit with a tensorflow dataset.
+
+To initalize/train a model:
+
+Specificy an optimizer for both the discriminator and the generator.
+
+Specify the generator architecture using the generator dictionary.
+
+Specify the discriminator dictionary using the discriminator dictionary.
+
+Specify a tf.keras.losses.BinaryCrossentropy(from_logits=True) object. Set reduction=tf.keras.losses.Reduction.NONE for distributed training.
+
+Create the DCGAN model by calling the constructor: 
+
+model = DCGAN(Generator_dict, Discriminator_dict, batch_size, model_name (string), distributed_training_flag) set the distributed training flag to false to train on single gpu.
+
+Compile the created DCGAN model by calling the compile function with: 
+
+model.compile(generator_optimizer, discriminator_optimizer, loss_object)
+
+Train the model by calling model.fit()
 
 
 # Trained Models
