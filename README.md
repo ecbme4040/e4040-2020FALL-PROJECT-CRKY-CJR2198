@@ -97,7 +97,9 @@ Train the model by calling model.fit()
 
 Will be uploaded to lionmail share folder:  https://drive.google.com/drive/folders/1amC47ZMfYxdGNkIH49kE9E0fgeykaGgV?usp=sharing
 
-Both discriminator and generator weights are stored separately (either as .h5 or as model folders) they can be opened in the normal fashion tf.keras.models.load_model()
+Both discriminator and generator weights are stored separately (either as .h5 or as model folders) they can be opened in the normal fashion tf.keras.models.load_model().
+
+See examples in the Generate notebooks.
 
 # Organization of this directory
 
