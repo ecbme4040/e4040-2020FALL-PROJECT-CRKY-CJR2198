@@ -126,13 +126,11 @@ class DCGAN (tf.keras.Model):
             # if using distributed training routine, loss aggregation needs to be manually defined
             # in the default case, average loss is used
             # for distributed processing I use the average per example loss
-            if self.distribute == True:  # flag for distributed training
-                disc_real_loss = tf.reduce_sum(self.loss_function(tf.ones_like(real_predictions), real_predictions)) * (
-                            1. / self.global_batch_size)
-                # disc_real_loss = tf.nn.compute_average_loss(self.loss_function(tf.ones_like(real_predictions), real_predictions),global_batch_size=self.global_batch_size)
+            if self.distribute == True:  # flag for distributed training, need to calc average loss manually
+                disc_real_loss = tf.reduce_sum(self.loss_function(tf.ones_like(real_predictions), real_predictions)) * (1. / self.global_batch_size) #calc per example avg loss across global batch
             else:
                 disc_real_loss = self.loss_function(tf.ones_like(real_predictions),
-                                                    real_predictions)  # In single gpu, loss function will avberage by default
+                                                    real_predictions)  # In single gpu, loss function will average by default
 
         self.Disc_real_accuracy_metric.update_state(tf.ones_like(real_predictions), tf.nn.sigmoid(
             real_predictions))  ##Update accuracy metric, must apply sigmoid because using logits
@@ -152,9 +150,7 @@ class DCGAN (tf.keras.Model):
             gen_predictions = self.disc_model(gen_images)  ## Use discriminator to predict the images
 
             if self.distribute == True:
-                disc_gen_loss = tf.reduce_sum(self.loss_function(tf.zeros_like(gen_predictions), gen_predictions)) * (
-                            1. / self.global_batch_size)
-                # disc_gen_loss = tf.nn.compute_average_loss(self.loss_function(tf.zeros_like(gen_predictions), gen_predictions), global_batch_size=self.global_batch_size)
+                disc_gen_loss = tf.reduce_sum(self.loss_function(tf.zeros_like(gen_predictions), gen_predictions)) * (1. / self.global_batch_size) #calc per example avg loss across global batch
             else:
                 disc_gen_loss = self.loss_function(tf.zeros_like(gen_predictions), gen_predictions)
 
@@ -173,10 +169,8 @@ class DCGAN (tf.keras.Model):
             random_gen = self.get_latent_vector(self.batch_size)
             # Get predictions of the discriminator using the generated samples
             gen_predictions = self.disc_model(self.gen_model(random_gen))
-            if self.distribute == True:
-                gen_mod_loss = tf.reduce_sum(self.loss_function(tf.ones_like(gen_predictions), gen_predictions)) * (
-                            1. / self.global_batch_size)  # self.calculate_gen_loss(gen_predictions)
-                # gen_mod_loss = tf.nn.compute_average_loss(self.loss_function(tf.ones_like(gen_predictions), gen_predictions), global_batch_size=self.global_batch_size)
+            if self.distribute == True: 
+                gen_mod_loss = tf.reduce_sum(self.loss_function(tf.ones_like(gen_predictions), gen_predictions)) * (1. / self.global_batch_size)  #calc per example avg loss across global batch
             else:
                 gen_mod_loss = self.loss_function(tf.ones_like(gen_predictions), gen_predictions)
 
