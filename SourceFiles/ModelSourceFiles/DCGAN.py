@@ -5,8 +5,8 @@ import matplotlib.pyplot as plt
 import numpy as np
 from IPython import display
 import time
-from ModelFunctions import *
-from Utils import *
+from SourceFiles.ModelSourceFiles.ModelFunctions import *
+from SourceFiles.Utilities.Utils import *
 import os
 
 
