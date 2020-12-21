@@ -11,25 +11,25 @@ The notebooks listed below contain a sample of the experiments referenced in the
 
 # Generation / Paper Reproduction Notebooks
 
-ImageNet-1K CIFAR-10 Classification - I train a DCGAN on the ImageNet-1K dataset then use the descriminator as a feature extractor on CIFAR-10 and classify the images with an L2-
+* ImageNet-1K CIFAR-10 Classification - I train a DCGAN on the ImageNet-1K dataset then use the descriminator as a feature extractor on CIFAR-10 and classify the images with an L2-
 SVM
 
-Generate ImageNet Images - Demonstration of ImageNet1k image generation with a trained DCGAN
+* Generate ImageNet Images - Demonstration of ImageNet1k image generation with a trained DCGAN
 
-Generate Face Images - Demonstration of facial image generation and vector arithmetic with trained DCGAN
+* Generate Face Images - Demonstration of facial image generation and vector arithmetic with trained DCGAN
 
 # Training and Generation Notebooks
 
-CelebA 128x128 - Scaling DCGAN architectures to higher resolutions
+* CelebA 128x128 - Scaling DCGAN architectures to higher resolutions
 
-CelebA 64x64 - Sample of runs at 64x64 resolution with varying architectures
+* CelebA 64x64 - Sample of runs at 64x64 resolution with varying architectures
 
-CelebA 32x32 - Sample of runs at 32x32 resolution with varying architectures
+* CelebA 32x32 - Sample of runs at 32x32 resolution with varying architectures
 
-LSUN 64x64 - Sample of runs at 64x64 resolution with varying architectures
+* LSUN 64x64 - Sample of runs at 64x64 resolution with varying architectures
 
-# MNIST DCGANs as Labeled Image Generators
-MNIST Experiment - DCGANs are trained using a subset of training data, generators are used to generate training data and an EfficientNetB0 is trained using the generated data. Full dataset with augmentation used as benchmark.
+# MNIST DCGANs as Labeled Image Generator Notebook
+* MNIST Experiment - DCGANs are trained using a subset of training data, generators are used to generate training data and an EfficientNetB0 is trained using the generated data. Full dataset with augmentation used as benchmark.
 
 # Requirements
  * Tensorflow 2.2 for all notebooks except the MNIST notebook, which requires Tensorflow 2.3 (for dataset_from_directory)
@@ -51,6 +51,16 @@ Utility functions used for graphs can be found within the SourceFiles/Utilites s
 # Generated Example Images
 
 Images generated using trained DCGANs can be found in the Generated Examples subdirectory.
+
+# Instructions 
+
+
+
+# Trained Models
+
+Will be uploaded to lionmail share folder:  https://drive.google.com/drive/folders/1amC47ZMfYxdGNkIH49kE9E0fgeykaGgV?usp=sharing
+
+Both discriminator and generator weights are stored separately (either as .h5 or as model folders) they can be opened in the normal fashion tf.keras.models.load_model()
 
 # Organization of this directory
 
