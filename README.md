@@ -80,6 +80,8 @@ Specify the generator architecture using the generator dictionary (see examples 
 
 Specify the discriminator dictionary using the discriminator dictionary (see examples in notebooks).
 
+Stride in the final layer must be set manually in ModelFunctions.py.
+
 Specify a tf.keras.losses.BinaryCrossentropy(from_logits=True) object. Set reduction=tf.keras.losses.Reduction.NONE for distributed training.
 
 Create the DCGAN model by calling the constructor: 
