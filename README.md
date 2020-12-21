@@ -76,9 +76,9 @@ To initalize/train a model:
 
 Specificy an optimizer for both the discriminator and the generator.
 
-Specify the generator architecture using the generator dictionary.
+Specify the generator architecture using the generator dictionary (see examples in notebooks).
 
-Specify the discriminator dictionary using the discriminator dictionary.
+Specify the discriminator dictionary using the discriminator dictionary (see examples in notebooks).
 
 Specify a tf.keras.losses.BinaryCrossentropy(from_logits=True) object. Set reduction=tf.keras.losses.Reduction.NONE for distributed training.
 
