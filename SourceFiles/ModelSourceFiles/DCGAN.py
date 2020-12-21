@@ -18,8 +18,8 @@ class DCGAN (tf.keras.Model):
     ## Init override, required input: generator_dict, discriminator_dict, batch_size, model name and distribution flag
     def __init__(self, gen_dict, disc_dict, batch_size, model_name, distribute, slow_train=True): #defualt to slow training
         super(DCGAN, self).__init__()
-        self.gen_model = create_generator_dict(gen_dict)#create_generator(number_of_latent_var)
-        self.disc_model = create_discriminator_dict(disc_dict, self.gen_model.output_shape)#create_discriminator(self.gen_model.output_shape)
+        self.gen_model = create_generator_dict(gen_dict)# creates the generator
+        self.disc_model = create_discriminator_dict(disc_dict, self.gen_model.output_shape)#creates the discriminator
         self.batch_size = batch_size #single batch size per device mandatory for distributed training
         self.global_batch_size = batch_size * 2 #global batch size for a total update = #number of devices * per device batch size I assume 2 gpus
         self.num_latent = gen_dict['num_latent']# Number of latent variables to use in generator input
