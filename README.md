@@ -86,6 +86,8 @@ Create the DCGAN model by calling the constructor:
 
 model = DCGAN(Generator_dict, Discriminator_dict, batch_size, model_name (string), distributed_training_flag) set the distributed training flag to false to train on single gpu.
 
+Batch size should be set to the per device batch size.
+
 Compile the created DCGAN model by calling the compile function with: 
 
 model.compile(generator_optimizer, discriminator_optimizer, loss_object)
